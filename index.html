@@ -63,6 +63,34 @@
             color: white;
             transform: rotateX(180deg);
         }
+        .text-white { color: white; }
+        .about-section { padding: 60px 0; background-color: #343a40; }
+        .services-info { margin-right: 30px; }
+        .circle-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+        }
+        .secretariat-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .member-info {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+        }
+        .secretariat-member:hover .member-info {
+            display: block;
+        }
     </style>
 </head>
 
@@ -291,112 +319,130 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <section class="artists-section section-padding" id="section_3">
+                
+
+
+        <section class="about-section section-padding" id="section_2">
             <div class="container">
-                <div class="row justify-content-center">
-
-                    <div class="col-12 text-center">
-                        <h2 class="mb-4">Meet Artists</h1>
+                <div class="row">
+        
+                    <div class="col-12 mb-4">
+                        <h2 class="text-white text-center">About IEMMUN 2024</h2>
+                        <p class="text-white text-center">Over the years the institute has been a keen contributor to the Model United Nations Community. 
+                            This year we are coming forth with the most awaited 11th edition of IEM-MUN. IEM-MUN 2024 will provide a platform to exhibit knowledge, interpersonal and leadership skills where the boundaries of every individual are tested, their patience worked and their intellect challenged. 
+                            IEM-MUN provides a wonderful platform for young people to solve issues of global consequences and shape their journey in becoming future leaders. Being one of the most eagerly awaited MUN in the city, it is a wonderful opportunity for student delegates to take responsibility, rise to the occasion and propose solutions to geopolitical issues.
+                        </p>
+                        <h6 class="text-white text-center mt-4">Once in Lifetime Experience</h6>
+                        <h6 class="text-white text-center mt-4">Wide Range of Delegations</h6>
                     </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg"
-                                    class="artists-image img-fluid">
+        
+                    <div class="col-12">
+                        <h2 class="text-white text-center mb-4">Meet the Secretariat</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/rajsekhar_hajrah.jpg" class="circle-image img-fluid" alt="Secretary General">
+                                <div class="member-info">Secretary General<br>RAJSEKHAR HAJRAH B.TECH</div>
                             </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Madona
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    August 16, 1958
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop, R&amp;B
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Madona Official</a>
-                                </p>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/sayantika_neogi.jpg" class="circle-image img-fluid" alt="Deputy Secretary General">
+                                <div class="member-info">Deputy Secretary General<br>SAYANTIKA NEOGI B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/vishal_roy.jpg" class="circle-image img-fluid" alt="Director General">
+                                <div class="member-info">Director General<br>VISHAL ROY B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/soujash_banerjee.jpg" class="circle-image img-fluid" alt="Head of Tech">
+                                <div class="member-info">Head of Tech<br>SOUJASH BANERJEE B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/pankaj_sharma.jpg" class="circle-image img-fluid" alt="Treasurer">
+                                <div class="member-info">Treasurer<br>PANKAJ SHARMA B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/rajnandini_ghosh.jpg" class="circle-image img-fluid" alt="Head of Sponsorship">
+                                <div class="member-info">Head of Sponsorship<br>RAJNANDINI GHOSH BBA</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/arghya_banerjee.jpg" class="circle-image img-fluid" alt="Head of Social">
+                                <div class="member-info">Head of Social<br>ARGHYA BANERJEE B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/sneha_das.jpg" class="circle-image img-fluid" alt="Head of Social">
+                                <div class="member-info">Head of Social<br>SNEHA DAS B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/shritama_ghosh.jpg" class="circle-image img-fluid" alt="Head of Logistics">
+                                <div class="member-info">Head of Logistics<br>SHRITAMA GHOSH BCA</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/prerona_paul.jpg" class="circle-image img-fluid" alt="Head of Hospitality">
+                                <div class="member-info">Head of Hospitality<br>PRERONA PAUL B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/ankita_mondal.jpg" class="circle-image img-fluid" alt="Head of Creatives">
+                                <div class="member-info">Head of Creatives<br>ANKITA MONDAL B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/swastika_saha.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <div class="member-info">Head of Collaboration<br>SWASTIKA SAHA B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/surjyanshu_ghosh.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <div class="member-info">Head of Collaboration<br>SURJYANSHU GHOSH B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/sagnik_sengupta.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <div class="member-info">Head of Collaboration<br>SAGNIK SENGUPTA B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/arshiya_nandy.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <div class="member-info">Head of Delegate Affairs<br>ARSHIYA NANDY B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/apratim_halder.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <div class="member-info">Head of Delegate Affairs<br>APRATIM HALDER B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/suhana_parveen.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <div class="member-info">Head of Delegate Affairs<br>SUHANA PARVEEN LLB</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/pushparghya_roy.jpg" class="circle-image img-fluid" alt="Head of PR">
+                                <div class="member-info">Head of PR<br>PUSHPARGHYA ROY B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/subhranil_ghosh.jpg" class="circle-image img-fluid" alt="Head of PR">
+                                <div class="member-info">Head of PR<br>SUBHRANIL GHOSH B.TECH</div>
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/sanchari_das.jpg" class="circle-image img-fluid" alt="Head of Documentation">
+                                <div class="member-info">Head of Documentation<br>SANCHARI DAS LLB</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/arsalan_urzaman.jpg" class="circle-image img-fluid" alt="Head of Logistics">
+                                <div class="member-info">Head of Logistics<br>ARSALAN URZAMAN B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/khushi_bhagat.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <div class="member-info">Head of Delegate Affairs<br>KHUSHI BHAGAT LLB</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/mayukh_parial.jpg" class="circle-image img-fluid" alt="Head of Documentation">
+                                <div class="member-info">Head of Documentation<br>MAYUKH PARIAL LLB</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/subhradip_sarkar.jpg" class="circle-image img-fluid" alt="Head of Hospitality">
+                                <div class="member-info">Head of Hospitality<br>SUBHRADIP SARKAR B.TECH</div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-5 col-12">
-                        <div class="artists-thumb">
-                            <div class="artists-image-wrap">
-                                <img src="images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg"
-                                    class="artists-image img-fluid">
-                            </div>
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Rihana
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    Feb 20, 1988
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Country
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Rihana Official</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="artists-thumb">
-                            <img src="images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg"
-                                class="artists-image img-fluid">
-
-                            <div class="artists-hover">
-                                <p>
-                                    <strong>Name:</strong>
-                                    Bruno Bros
-                                </p>
-
-                                <p>
-                                    <strong>Birthdate:</strong>
-                                    October 8, 1985
-                                </p>
-
-                                <p>
-                                    <strong>Music:</strong>
-                                    Pop
-                                </p>
-
-                                <hr>
-
-                                <p class="mb-0">
-                                    <strong>Youtube Channel:</strong>
-                                    <a href="#">Bruno Official</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                 </div>
             </div>
         </section>
+        
 
 
         <section class="schedule-section section-padding" id="section_4">
