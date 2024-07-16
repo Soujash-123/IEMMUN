@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Welcome to IEMMUN 2k24</title>
+    <title>IEMMUN 2k24</title>
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Countdown Timer CSS -->
     <style>
         .countdown {
             display: flex;
@@ -62,39 +62,49 @@
             color: white;
             transform: rotateX(180deg);
         }
-        .text-white { color: white; }
-        .about-section { padding: 60px 0; background-color: #343a40; }
-        .services-info { margin-right: 30px; }
-        .circle-image {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin: 10px;
-        }
-        .secretariat-member {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .member-info {
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            display: none;
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
-        }
-        .secretariat-member:hover .member-info {
-            display: block;
-        }
-    </style>  <!-- Countdown Timer CSS -->
-  
+        .text-white { 
+    color: white; 
+}
+.about-section { 
+    padding: 60px 0; 
+    background-color: #343a40; 
+}
+.services-info { 
+    margin-right: 30px; 
+}
+.circle-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px;
+    position: relative;
+}
+.secretariat-member {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+.member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    border-radius: 0 0 50% 50%;
+    display: none; /* Hide by default */
+}
+.secretariat-member:hover .member-info {
+    display: block; /* Show on hover */
+}
+    </style>
 </head>
 
-<body> 
+<body>
     <main>
         <header class="site-header">
             <div class="container">
@@ -102,7 +112,7 @@
                     <div class="col-lg-12 col-12 d-flex flex-wrap" style="background-color: transparent;">
                         <p class="d-flex me-4 mb-0" style="background-color: transparent;">
                             <i class="bi-person custom-icon me-2" style="background-color: transparent;"></i>
-                            <strong class="text-white" style="background-color: transparent; color: white;">Welcome to IEMMUN 2k24</strong>
+                            <strong class="text-white" style="background-color: transparent; color: white;"></strong>
                         </p>
                     </div>
                 </div>
@@ -111,7 +121,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    IEMMUN 2k24
+                    IEMMUN 
                 </a>
                 <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Register</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -127,13 +137,13 @@
                             <a class="nav-link click-scroll" href="#section_2">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Committees</a>
+                            <a class="nav-link click-scroll" href="#section_3">Artists</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Secreteriat</a>
+                            <a class="nav-link click-scroll" href="#section_4">Schedule</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Itenary</a>
+                            <a class="nav-link click-scroll" href="#section_5">Pricing</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_6">Contact</a>
@@ -156,14 +166,16 @@
                         <div class="date-wrap">
                             <h5 class="text-white">
                                 <i class="custom-icon bi-clock me-2"></i>
-                                13 - 15<sup>th</sup>, September 2024
+                                13 - 15<sup>th</sup> September 2024
                             </h5>
                         </div>
                         <div class="location-wrap mx-auto py-3 py-lg-0">
-                            <h5 class="text-white">
-                                <i class="custom-icon bi-geo-alt me-2"></i>
-                                IEM, Gurukul Building
-                            </h5>
+                            <a href="https://maps.app.goo.gl/TfrSqnc6HygwyUMFA" target="_blank" rel="noopener noreferrer">
+                                <h5 class="text-white">
+                                    <i class="custom-icon bi-geo-alt me-2"></i>
+                                    IEM Gurukul Building
+                                </h5>
+                            </a>
                         </div>
                         <div class="social-share">
                             <ul class="social-icon d-flex align-items-center justify-content-center">
@@ -254,7 +266,22 @@
         </section>
         <section class="about-section section-padding" id="section_2">
             <div class="container">
-                <div class="row">        
+                <div class="row">
+        
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">About IEMMUN 2024</h2>
+        
+                            <p class="text-white">Over the years the institute has been a keen contributor to the Model United Nations Community. 
+                                This year we are coming forth with the most awaited 11th edition of IEM-MUN. IEM-MUN 2024 will provide a platform to exhibit knowledge, interpersonal and leadership skills where the boundaries of every individual are tested, their patience worked and their intellect challenged. 
+                                IEM-MUN provides a wonderful platform for young people to solve issues of global consequences and shape their journey in becoming future leaders. Being one of the most eagerly awaited MUN in the city, it is a wonderful opportunity for student delegates to take responsibility, rise to the occasion and propose solutions to geopolitical issues.
+                            </p>
+        
+                            <h6 class="text-white mt-4">Once in Lifetime Experience</h6>
+                            <h6 class="text-white mt-4">Wide Range of Delegations</h6>
+                        </div>
+                    </div>
+        
                     <div class="col-lg-6 col-12">
                         <div id="aboutCarousel" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
@@ -312,16 +339,6 @@
                 <div class="row">
         
                     <div class="col-12 mb-4">
-                        <h2 class="text-white text-center">About IEMMUN 2024</h2>
-                        <p class="text-white text-center">Over the years the institute has been a keen contributor to the Model United Nations Community. 
-                            This year we are coming forth with the most awaited 11th edition of IEM-MUN. IEM-MUN 2024 will provide a platform to exhibit knowledge, interpersonal and leadership skills where the boundaries of every individual are tested, their patience worked and their intellect challenged. 
-                            IEM-MUN provides a wonderful platform for young people to solve issues of global consequences and shape their journey in becoming future leaders. Being one of the most eagerly awaited MUN in the city, it is a wonderful opportunity for student delegates to take responsibility, rise to the occasion and propose solutions to geopolitical issues.
-                        </p>
-                        <h6 class="text-white text-center mt-4">Once in Lifetime Experience</h6>
-                        <h6 class="text-white text-center mt-4">Wide Range of Delegations</h6>
-                    </div>
-        
-                    <div class="col-12">
                         <h2 class="text-white text-center mb-4">Meet the Secretariat</h2>
                         <div class="row justify-content-center">
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
@@ -429,6 +446,153 @@
         </section>
         
 
+
+
+
+        <section class="video-section" id="section_3">
+            <video autoplay muted loop id="video-background">
+                <source src="video/new-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="content-overlay">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 col-md-4 community-item">
+                            <div class="community-card">
+                                <div class="circle-image">
+                                    <img src="images/communities/unecosoc.jpg" class="img-fluid rounded-circle" alt="UNECOSOC">
+                                </div>
+                                <div class="community-info">
+                                    <h3>UNECOSOC</h3>
+                                    <p>UN Economic and Social Council works towards sustainable development.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 community-item">
+                            <div class="community-card">
+                                <div class="circle-image">
+                                    <img src="images/communities/undisec.jpg" class="img-fluid rounded-circle" alt="UNDISEC">
+                                </div>
+                                <div class="community-info">
+                                    <h3>UNDISEC</h3>
+                                    <p>UN Disarmament and International Security Committee focuses on global security issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 community-item">
+                            <div class="community-card">
+                                <div class="circle-image">
+                                    <img src="images/communities/unhcr.jpg" class="img-fluid rounded-circle" alt="UNHCR">
+                                </div>
+                                <div class="community-info">
+                                    <h3>UNHCR</h3>
+                                    <p>UN Refugee Agency provides assistance and protection to refugees worldwide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 community-item">
+                            <div class="community-card">
+                                <div class="circle-image">
+                                    <img src="images/communities/loksabha.jpg" class="img-fluid rounded-circle" alt="Lok Sabha">
+                                </div>
+                                <div class="community-info">
+                                    <h3>Lok Sabha</h3>
+                                    <p>The lower house of India's Parliament represents the people of India.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 community-item">
+                            <div class="community-card">
+                                <div class="circle-image">
+                                    <img src="images/ip.jpg" class="img-fluid rounded-circle" alt="IP">
+                                </div>
+                                <div class="community-info">
+                                    <h3>IP</h3>
+                                    <p>Intellectual Property Committee deals with global intellectual property issues.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            .video-section {
+    position: relative;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    padding: 60px 0; /* Adjust padding as needed */
+}
+
+.community-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.community-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency as needed */
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.circle-image {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.community-info {
+    text-align: center;
+}
+
+.community-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.community-info p {
+    font-size: 16px;
+    color: #d4d4d4;
+}
+
+.content-overlay .container {
+    background-color: rgba(255, 255, 255, 0); /* Adjust transparency as needed */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+        </style>
+        
 
         <section class="schedule-section section-padding" id="section_4">
             <div class="container">
