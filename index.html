@@ -440,9 +440,9 @@
         <div class="container">
             <div class="col-12 mb-3" style="margin-top: 20px;">
                 <h3 class="text-white text-center mb-4">This Year's Committees</h3>
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-md-4 community-item">
-                        <div class="community-card">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-card">
                             <div class="circle-image">
                                 <img src="images/communities/unecosoc.jpg" class="img-fluid rounded-circle" alt="UNECOSOC">
                             </div>
@@ -451,9 +451,7 @@
                                 <p>UN Economic and Social Council works towards sustainable development.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 community-item">
-                        <div class="community-card">
+                        <div class="carousel-card">
                             <div class="circle-image">
                                 <img src="images/communities/undisec.jpg" class="img-fluid rounded-circle" alt="UNDISEC">
                             </div>
@@ -462,9 +460,7 @@
                                 <p>UN Disarmament and International Security Committee focuses on global security issues.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 community-item">
-                        <div class="community-card">
+                        <div class="carousel-card">
                             <div class="circle-image">
                                 <img src="images/communities/unhcr.jpg" class="img-fluid rounded-circle" alt="UNHCR">
                             </div>
@@ -473,9 +469,7 @@
                                 <p>UN Refugee Agency provides assistance and protection to refugees worldwide.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 community-item">
-                        <div class="community-card">
+                        <div class="carousel-card">
                             <div class="circle-image">
                                 <img src="images/communities/loksabha.jpg" class="img-fluid rounded-circle" alt="Lok Sabha">
                             </div>
@@ -484,9 +478,7 @@
                                 <p>The lower house of India's Parliament represents the people of India.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 community-item">
-                        <div class="community-card">
+                        <div class="carousel-card">
                             <div class="circle-image">
                                 <img src="images/ip.jpg" class="img-fluid rounded-circle" alt="IP">
                             </div>
@@ -501,7 +493,6 @@
         </div>
     </div>
 </section>
-
 <style>
 .video-section {
     position: relative;
@@ -526,18 +517,59 @@
     padding: 80px 0; /* Adjust padding as needed */
 }
 
-.community-item {
-    margin-bottom: 30px;
+.carousel-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+.carousel-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    width: 250px;
+    height: 300px;
+    margin-left: -125px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.community-card {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency as needed */
-    padding: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+.carousel-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(500px);
+}
+.carousel-card:nth-child(2) {
+    transform: rotateY(72deg) translateZ(500px);
+}
+.carousel-card:nth-child(3) {
+    transform: rotateY(144deg) translateZ(500px);
+}
+.carousel-card:nth-child(4) {
+    transform: rotateY(216deg) translateZ(500px);
+}
+.carousel-card:nth-child(5) {
+    transform: rotateY(288deg) translateZ(500px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 .circle-image {
@@ -574,8 +606,7 @@
     padding: 20px;
     border-radius: 8px;
 }
-</style>
-
+    </style>
 
         
 
