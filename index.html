@@ -264,42 +264,6 @@
                 </div>
             </div>
         </section>
-        <script>
-            const countdown = () => {
-                const countDate = new Date("September 13, 2024 00:00:00").getTime();
-                const now = new Date().getTime();
-                const gap = countDate - now;
-    
-                const second = 1000;
-                const minute = second * 60;
-                const hour = minute * 60;
-                const day = hour * 24;
-    
-                const textDay = Math.floor(gap / day);
-                const textHour = Math.floor((gap % day) / hour);
-                const textMinute = Math.floor((gap % hour) / minute);
-                const textSecond = Math.floor((gap % minute) / second);
-    
-                document.getElementById('days').innerHTML = `<div class="flip-card-inner">
-                    <div class="flip-card-front">${textDay}</div>
-                    <div class="flip-card-back">${textDay}</div>
-                </div>`;
-                document.getElementById('hours').innerHTML = `<div class="flip-card-inner">
-                    <div class="flip-card-front">${textHour}</div>
-                    <div class="flip-card-back">${textHour}</div>
-                </div>`;
-                document.getElementById('minutes').innerHTML = `<div class="flip-card-inner">
-                    <div class="flip-card-front">${textMinute}</div>
-                    <div class="flip-card-back">${textMinute}</div>
-                </div>`;
-                document.getElementById('seconds').innerHTML = `<div class="flip-card-inner">
-                    <div class="flip-card-front">${textSecond}</div>
-                    <div class="flip-card-back">${textSecond}</div>
-                </div>`;
-            };
-    
-            setInterval(countdown, 1000);
-        </script>
         <section class="about-section section-padding" id="section_2">
             <div class="container">
                 <div class="row">
@@ -378,51 +342,51 @@
                         <h2 class="text-white text-center mb-4">Meet the Secretariat</h2>
                         <div class="row justify-content-center">
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/rajsekhar_hajrah.jpg" class="circle-image img-fluid" alt="Secretary General">
+                                <img src="secretariat/Rajsekhar_Hajrah.jpg" class="circle-image img-fluid" alt="Secretary General">
                                 <div class="member-info">Secretary General<br>RAJSEKHAR HAJRAH B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/sayantika_neogi.jpg" class="circle-image img-fluid" alt="Deputy Secretary General">
+                                <img src="secretariat\Sayantika_neogi.jpg" class="circle-image img-fluid" alt="Deputy Secretary General">
                                 <div class="member-info">Deputy Secretary General<br>SAYANTIKA NEOGI B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/vishal_roy.jpg" class="circle-image img-fluid" alt="Director General">
+                                <img src="secretariat/Vishal_Roy.jpg" class="circle-image img-fluid" alt="Director General">
                                 <div class="member-info">Director General<br>VISHAL ROY B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/soujash_banerjee.jpg" class="circle-image img-fluid" alt="Head of Tech">
+                                <img src="secretariat/Soujash_banerjee.jpg" class="circle-image img-fluid" alt="Head of Tech">
                                 <div class="member-info">Head of Tech<br>SOUJASH BANERJEE B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/pankaj_sharma.jpg" class="circle-image img-fluid" alt="Treasurer">
+                                <img src="secretariat/Pankaj_kumar_Sharma.jpg" class="circle-image img-fluid" alt="Treasurer">
                                 <div class="member-info">Treasurer<br>PANKAJ SHARMA B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/rajnandini_ghosh.jpg" class="circle-image img-fluid" alt="Head of Sponsorship">
+                                <img src="secretariat/Rajnandini_Ghosh.jpg" class="circle-image img-fluid" alt="Head of Sponsorship">
                                 <div class="member-info">Head of Sponsorship<br>RAJNANDINI GHOSH BBA</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/arghya_banerjee.jpg" class="circle-image img-fluid" alt="Head of Social">
+                                <img src="secretariat/Arghya_Banerjee.jpg" class="circle-image img-fluid" alt="Head of Social">
                                 <div class="member-info">Head of Social<br>ARGHYA BANERJEE B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/sneha_das.jpg" class="circle-image img-fluid" alt="Head of Social">
+                                <img src="secretariat/Sneha_Das.jpg" class="circle-image img-fluid" alt="Head of Social">
                                 <div class="member-info">Head of Social<br>SNEHA DAS B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/shritama_ghosh.jpg" class="circle-image img-fluid" alt="Head of Logistics">
+                                <img src="secretariat/Shritama_Ghosh.jpg" class="circle-image img-fluid" alt="Head of Logistics">
                                 <div class="member-info">Head of Logistics<br>SHRITAMA GHOSH BCA</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/prerona_paul.jpg" class="circle-image img-fluid" alt="Head of Hospitality">
+                                <img src="secretariat/Prerona_Paul.jpg" class="circle-image img-fluid" alt="Head of Hospitality">
                                 <div class="member-info">Head of Hospitality<br>PRERONA PAUL B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/ankita_mondal.jpg" class="circle-image img-fluid" alt="Head of Creatives">
+                                <img src="secretariat/Ankita_mandal.jpg" class="circle-image img-fluid" alt="Head of Creatives">
                                 <div class="member-info">Head of Creatives<br>ANKITA MONDAL B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/swastika_saha.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <img src="secretariat/Swastika_Saha.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
                                 <div class="member-info">Head of Collaboration<br>SWASTIKA SAHA B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
@@ -430,49 +394,34 @@
                                 <div class="member-info">Head of Collaboration<br>SURJYANSHU GHOSH B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/sagnik_sengupta.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <img src="secretariat/Sagnik_sengupta.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
                                 <div class="member-info">Head of Collaboration<br>SAGNIK SENGUPTA B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/arshiya_nandy.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <img src="secretariat/Arshiya_Nandy.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
                                 <div class="member-info">Head of Delegate Affairs<br>ARSHIYA NANDY B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/apratim_halder.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <img src="secretariat/Apratim_Halder.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
                                 <div class="member-info">Head of Delegate Affairs<br>APRATIM HALDER B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/suhana_parveen.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <img src="secretariat/Suhana_Parveen.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
                                 <div class="member-info">Head of Delegate Affairs<br>SUHANA PARVEEN LLB</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/pushparghya_roy.jpg" class="circle-image img-fluid" alt="Head of PR">
+                                <img src="secretariat/Pushparghya_Roy.jpg" class="circle-image img-fluid" alt="Head of PR">
                                 <div class="member-info">Head of PR<br>PUSHPARGHYA ROY B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/subhranil_ghosh.jpg" class="circle-image img-fluid" alt="Head of PR">
+                                <img src="secretariat/Subhranil_Ghosh.jpg" class="circle-image img-fluid" alt="Head of PR">
                                 <div class="member-info">Head of PR<br>SUBHRANIL GHOSH B.TECH</div>
                             </div>
                             
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/sanchari_das.jpg" class="circle-image img-fluid" alt="Head of Documentation">
+                                <img src="secretariat/Sanchari_das.jpg" class="circle-image img-fluid" alt="Head of Documentation">
                                 <div class="member-info">Head of Documentation<br>SANCHARI DAS LLB</div>
                             </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/arsalan_urzaman.jpg" class="circle-image img-fluid" alt="Head of Logistics">
-                                <div class="member-info">Head of Logistics<br>ARSALAN URZAMAN B.TECH</div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/khushi_bhagat.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
-                                <div class="member-info">Head of Delegate Affairs<br>KHUSHI BHAGAT LLB</div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/mayukh_parial.jpg" class="circle-image img-fluid" alt="Head of Documentation">
-                                <div class="member-info">Head of Documentation<br>MAYUKH PARIAL LLB</div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/subhradip_sarkar.jpg" class="circle-image img-fluid" alt="Head of Hospitality">
-                                <div class="member-info">Head of Hospitality<br>SUBHRADIP SARKAR B.TECH</div>
                             </div>
                         </div>
                     </div>
@@ -484,12 +433,7 @@
 
 
 
-<style>
-        #section_3 .content-overlay h2 {
-            margin-top: -20px; /* Adjust this value as needed */
-            padding-top: 0;
-        }
-        </style>
+
         <section class="video-section" id="section_3">
             <video autoplay muted loop id="video-background">
                 <source src="video/new-video.mp4" type="video/mp4">
@@ -497,11 +441,7 @@
             </video>
             <div class="content-overlay">
                 <div class="container">
-                <div class="col-12 mb-1">
-                    <h2 class="text-white text-center mb-4">This Year's Communities</h2>
                     <div class="row justify-content-center">
-                    
-                
                         <div class="col-lg-3 col-md-4 community-item">
                             <div class="community-card">
                                 <div class="circle-image">
@@ -559,7 +499,6 @@
                         </div>
                     </div>
                 </div>
-                </div>
             </div>
         </section>
         
@@ -583,8 +522,8 @@
 .content-overlay {
     position: relative;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust transparency as needed */
-    padding: 200px 0; /* Adjust padding as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    padding: 60px 0; /* Adjust padding as needed */
 }
 
 .community-item {
@@ -640,79 +579,185 @@
         </style>
         
 
-        <!-- Brochure Section -->
-<section class="brochure-section section-padding" id="section_brochure">
-    <video autoplay muted loop class="video-background">
-        <source src="video/VIDEO1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
-                <div class="services-info">
-                    <h2 class="mb-4">Download Brochure</h2>
-                    <p>Click the button below to download our brochure for IEMMUN 2024.</p>
-                    <a href="MUN brochure 2024_20240717_181436_0000.pdf" class="btn custom-btn" download>Download Brochure</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div>
-                    <iframe src="MUN brochure 2024_20240717_181436_0000.pdf" width="100%" height="500px">
-                        <p>Your browser does not support iframes.</p>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <section class="schedule-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
 
-<style>
-    .brochure-section {
-        position: relative;
-        padding: 60px 0;
-        color: #ffffff;
-    }
-    .brochure-section .video-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-    .brochure-section .dark-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
-        z-index: -1;
-    }
-    .brochure-section h2 {
-        font-size: 36px;
-    }
-    .brochure-section p {
-        color: #bfbfbf;
-    }
-    .brochure-section .btn.custom-btn {
-        background-color: #00ffff;
-        color: #ffffff;
-        padding: 12px 24px;
-        border-radius: 4px;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    .brochure-section .btn.custom-btn:hover {
-        background-color: #00e6e6;
-        color: #ffffff;
-    }
-    .brochure-section iframe {
-        border: 2px solid #00ffff;
-        border-radius: 4px;
-    }
-</style>
+                    <div class="col-12 text-center">
+                        <h2 class="text-white mb-4">Event Schedule</h1>
+
+                            <div class="table-responsive">
+                                <table class="schedule-table table table-dark">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Date</th>
+
+                                            <th scope="col">Wednesday</th>
+
+                                            <th scope="col">Thursday</th>
+
+                                            <th scope="col">Friday</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Day 1</th>
+
+                                            <td class="table-background-image-wrap pop-background-image">
+                                                <h3>Pop Night</h3>
+
+                                                <p class="mb-2">5:00 - 7:00 PM</p>
+
+                                                <p>By Adele</p>
+
+                                                <div class="section-overlay"></div>
+                                            </td>
+
+                                            <td style="background-color: #F3DCD4"></td>
+
+                                            <td class="table-background-image-wrap rock-background-image">
+                                                <h3>Rock & Roll</h3>
+
+                                                <p class="mb-2">7:00 - 11:00 PM</p>
+
+                                                <p>By Rihana</p>
+
+                                                <div class="section-overlay"></div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">Day 2</th>
+
+                                            <td style="background-color: #ECC9C7"></td>
+
+                                            <td>
+                                                <h3>DJ Night</h3>
+
+                                                <p class="mb-2">6:30 - 9:30 PM</p>
+
+                                                <p>By Rihana</p>
+                                            </td>
+
+                                            <td style="background-color: #D9E3DA"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">Day 3</th>
+
+                                            <td class="table-background-image-wrap country-background-image">
+                                                <h3>Country Music</h3>
+
+                                                <p class="mb-2">4:30 - 7:30 PM</p>
+
+                                                <p>By Rihana</p>
+
+                                                <div class="section-overlay"></div>
+                                            </td>
+
+                                            <td style="background-color: #D1CFC0"></td>
+
+                                            <td>
+                                                <h3>Free Styles</h3>
+
+                                                <p class="mb-2">6:00 - 10:00 PM</p>
+
+                                                <p>By Members</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="pricing-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4">Plans, you' love</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3><small>Early Bird</small> $120</h3>
+
+                                    <p>Including good things:</p>
+                                </div>
+
+                                <p class="pricing-tag ms-auto">Save up to <span>50%</span></h2>
+                            </div>
+
+                            <ul class="pricing-list mt-3">
+                                <li class="pricing-list-item">platform for potential customers</li>
+
+                                <li class="pricing-list-item">digital experience</li>
+
+                                <li class="pricing-list-item">high-quality sound</li>
+
+                                <li class="pricing-list-item">standard content</li>
+                            </ul>
+
+                            <a class="link-fx-1 color-contrast-higher mt-4" href="ticket.html">
+                                <span>Register Now</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="16" cy="16" r="15.5"></circle>
+                                        <line x1="10" y1="18" x2="16" y2="12"></line>
+                                        <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3><small>Standard</small> $240</h3>
+
+                                    <p>What makes a premium festava?</p>
+                                </div>
+                            </div>
+
+                            <ul class="pricing-list mt-3">
+                                <li class="pricing-list-item">platform for potential customers</li>
+
+                                <li class="pricing-list-item">digital experience</li>
+
+                                <li class="pricing-list-item">high-quality sound</li>
+
+                                <li class="pricing-list-item">premium content</li>
+
+                                <li class="pricing-list-item">live chat support</li>
+                            </ul>
+
+                            <a class="link-fx-1 color-contrast-higher mt-4" href="ticket.html">
+                                <span>Register Now</span>
+                                <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="16" cy="16" r="15.5"></circle>
+                                        <line x1="10" y1="18" x2="16" y2="12"></line>
+                                        <line x1="16" y1="12" x2="22" y2="18"></line>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
 
         <section class="contact-section section-padding" id="section_6">
             <div class="container">
@@ -786,7 +831,42 @@
         </section>
         <!-- Other sections remain unchanged -->
         <!-- JavaScript for Countdown Timer -->
-        
+        <script>
+            const countdown = () => {
+                const countDate = new Date("September 13, 2024 00:00:00").getTime();
+                const now = new Date().getTime();
+                const gap = countDate - now;
+    
+                const second = 1000;
+                const minute = second * 60;
+                const hour = minute * 60;
+                const day = hour * 24;
+    
+                const textDay = Math.floor(gap / day);
+                const textHour = Math.floor((gap % day) / hour);
+                const textMinute = Math.floor((gap % hour) / minute);
+                const textSecond = Math.floor((gap % minute) / second);
+    
+                document.getElementById('days').innerHTML = `<div class="flip-card-inner">
+                    <div class="flip-card-front">${textDay}</div>
+                    <div class="flip-card-back">${textDay}</div>
+                </div>`;
+                document.getElementById('hours').innerHTML = `<div class="flip-card-inner">
+                    <div class="flip-card-front">${textHour}</div>
+                    <div class="flip-card-back">${textHour}</div>
+                </div>`;
+                document.getElementById('minutes').innerHTML = `<div class="flip-card-inner">
+                    <div class="flip-card-front">${textMinute}</div>
+                    <div class="flip-card-back">${textMinute}</div>
+                </div>`;
+                document.getElementById('seconds').innerHTML = `<div class="flip-card-inner">
+                    <div class="flip-card-front">${textSecond}</div>
+                    <div class="flip-card-back">${textSecond}</div>
+                </div>`;
+            };
+    
+            setInterval(countdown, 1000);
+        </script>
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
