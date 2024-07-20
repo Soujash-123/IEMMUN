@@ -494,7 +494,7 @@
     </div>
 </section>
 <style>
-.video-section {
+    .video-section {
     position: relative;
     height: 100vh; /* Adjust height as needed */
     overflow: hidden;
@@ -545,22 +545,29 @@
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .carousel-card:nth-child(1) {
     transform: rotateY(0deg) translateZ(500px);
+    opacity: 1;
 }
 .carousel-card:nth-child(2) {
     transform: rotateY(72deg) translateZ(500px);
+    opacity: 0.8;
 }
 .carousel-card:nth-child(3) {
     transform: rotateY(144deg) translateZ(500px);
+    opacity: 0.6;
 }
 .carousel-card:nth-child(4) {
     transform: rotateY(216deg) translateZ(500px);
+    opacity: 0.4;
 }
 .carousel-card:nth-child(5) {
     transform: rotateY(288deg) translateZ(500px);
+    opacity: 0.2;
 }
 
 @keyframes rotate {
@@ -606,8 +613,8 @@
     padding: 20px;
     border-radius: 8px;
 }
-    </style>
 
+</style>
         
 
         
