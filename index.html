@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
     <!-- Countdown Timer CSS -->
     <style>
@@ -411,7 +411,7 @@
                                 <div class="member-info">Head of PR<br>PUSHPARGHYA ROY B.TECH</div>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                                <img src="secretariat/Subhranil_ghosh.JPG" class="circle-image img-fluid" alt="Head of PR">
+                                <img src="secretariat/Subhranil_Ghosh.jpg" class="circle-image img-fluid" alt="Head of PR">
                                 <div class="member-info">Head of PR<br>SUBHRANIL GHOSH B.TECH</div>
                             </div>
                             
@@ -449,6 +449,7 @@
                             <div class="community-info">
                                 <h3>UNECOSOC</h3>
                                 <p>UN Economic and Social Council works towards sustainable development.</p>
+                                <div class="additional-info">The United Nations Economic and Social Council (UNECOSOC) is a UN body that promotes international economic and social cooperation. Comprising 54 member states, UNECOSOC coordinates the UN's work in areas like sustainable development, human rights, and health, fostering dialogue among governments, NGOs, and other stakeholders.</div>
                             </div>
                         </div>
                         <div class="carousel-card">
@@ -458,6 +459,7 @@
                             <div class="community-info">
                                 <h3>UNDISEC</h3>
                                 <p>UN Disarmament and International Security Committee focuses on global security issues.</p>
+                                <div class="additional-info">More details about UNDISEC...</div>
                             </div>
                         </div>
                         <div class="carousel-card">
@@ -467,6 +469,7 @@
                             <div class="community-info">
                                 <h3>UNHCR</h3>
                                 <p>UN Refugee Agency provides assistance and protection to refugees worldwide.</p>
+                                <div class="additional-info">More details about UNHCR...</div>
                             </div>
                         </div>
                         <div class="carousel-card">
@@ -476,6 +479,7 @@
                             <div class="community-info">
                                 <h3>Lok Sabha</h3>
                                 <p>The lower house of India's Parliament represents the people of India.</p>
+                                <div class="additional-info">More details about Lok Sabha...</div>
                             </div>
                         </div>
                         <div class="carousel-card">
@@ -485,6 +489,7 @@
                             <div class="community-info">
                                 <h3>IP</h3>
                                 <p>Intellectual Property Committee deals with global intellectual property issues.</p>
+                                <div class="additional-info">More details about IP...</div>
                             </div>
                         </div>
                     </div>
@@ -532,6 +537,10 @@
     animation: rotate 20s infinite linear;
 }
 
+.carousel:hover {
+    animation-play-state: paused; /* Pause the rotation when hovering over the carousel */
+}
+
 .carousel-card {
     position: absolute;
     top: 0;
@@ -541,11 +550,22 @@
     width: 250px;
     height: 300px;
     margin-left: -125px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: background-color 0.3s, transform 0.3s, z-index 0.3s;
+}
+
+.carousel-card:hover {
+    background-color: darkcyan;
+    transform: translateZ(600px) scale(1.3); /* Increase scale and bring the card closer to the viewer */
+    z-index: 10; /* Bring the hovered card to the front */
+}
+
+.carousel-card:hover .additional-info {
+    display: block;
 }
 
 .carousel-card:nth-child(1) {
@@ -589,6 +609,7 @@
 
 .community-info {
     text-align: center;
+    position: relative;
 }
 
 .community-info h3 {
@@ -602,13 +623,17 @@
     color: #d4d4d4;
 }
 
-.content-overlay .container {
-    background-color: rgba(255, 255, 255, 0); /* Adjust transparency as needed */
-    padding: 20px;
-    border-radius: 8px;
+.additional-info {
+    display: none;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 4px;
 }
 </style>
-        
+
 
         
 
