@@ -264,77 +264,130 @@
         <section class="about-section section-padding" id="section_2">
     <div class="container">
         <div class="row">
-
             <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
                 <div class="services-info">
-                    <h2 class="text-white mb-4">About IEMMUN 2024</h2>
+                    <h2 class="text-white mb-4">About IEMMUN 2k24</h2>
 
-                    <p class="text-white">Over the years the institute has been a keen contributor to the Model United Nations Community. 
-                        This year we are coming forth with the most awaited 11th edition of IEM-MUN. IEM-MUN 2024 will provide a platform to exhibit knowledge, interpersonal and leadership skills where the boundaries of every individual are tested, their patience worked and their intellect challenged. 
-                        IEM-MUN provides a wonderful platform for young people to solve issues of global consequences and shape their journey in becoming future leaders. Being one of the most eagerly awaited MUN in the city, it is a wonderful opportunity for student delegates to take responsibility, rise to the occasion and propose solutions to geopolitical issues.
+                    <p class="text-white">
+                        Over the years, the institute has been a keen contributor to the Model United Nations Community. 
+                        This year we are coming forth with the most awaited 11th edition of IEM-MUN. IEM-MUN 2024 will provide a platform to exhibit knowledge, interpersonal, and leadership skills where the boundaries of every individual are tested, their patience worked, and their intellect challenged. 
+                        IEM-MUN provides a wonderful platform for young people to solve issues of global consequences and shape their journey in becoming future leaders. Being one of the most eagerly awaited MUN in the city, it is a wonderful opportunity for student delegates to take responsibility, rise to the occasion, and propose solutions to geopolitical issues.
                     </p>
 
-                    <h6 class="text-white mt-4">Once in Lifetime Experience</h6>
+                    <h6 class="text-white mt-4">Once in a Lifetime Experience</h6>
                     <h6 class="text-white mt-4">Wide Range of Delegations</h6>
                 </div>
             </div>
 
             <div class="col-lg-6 col-12">
-                <div id="aboutCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                <div id="slideshow" class="slideshow">
+                    <div class="slides">
+                        <div class="slide active">
                             <img src="images/pexels-alexander-suhorucov-6457579.jpg" class="d-block w-100" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="caption">
                                 <h3>IEMMUN 2k23</h3>
                                 <p>UNCOPUOS</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="slide">
                             <img src="images/slide2.jpg" class="d-block w-100" alt="Second slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="caption">
                                 <h3>Second Slide</h3>
                                 <p>Description for second slide</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="slide">
                             <img src="images/slide3.jpg" class="d-block w-100" alt="Third slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="caption">
                                 <h3>Third Slide</h3>
                                 <p>Description for third slide</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="slide">
                             <img src="images/slide4.jpg" class="d-block w-100" alt="Fourth slide">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="caption">
                                 <h3>Fourth Slide</h3>
                                 <p>Description for fourth slide</p>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#aboutCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="moveSlide(1)">&#10095;</a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
 <style>
-.carousel-item {
-    transition: none !important;
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 </style>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+let currentSlide = 0;
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    if (n >= slides.length) { currentSlide = 0; }
+    if (n < 0) { currentSlide = slides.length - 1; }
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(-${currentSlide * 100}%)`;
+    });
+}
+
+function moveSlide(n) {
+    showSlide(currentSlide += n);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
+</script>
+
 
 <script>
 $(document).ready(function(){
