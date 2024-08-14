@@ -16,38 +16,6 @@
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
     <!-- Countdown Timer CSS -->
     <style>
-    	body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #00008B; /* Dark blue background */
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #preloader video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translateX(-50%) translateY(-50%);
-            object-fit: cover;
-        }
-	
         .countdown {
             display: flex;
             justify-content: center;
@@ -137,35 +105,6 @@
 </head>
 
 <body>
-	<div id="preloader">
-        <video id="preloader-video" autoplay muted playsinline>
-            <source src="PreLoader.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const preloader = document.getElementById('preloader');
-            const preloaderVideo = document.getElementById('preloader-video');
-
-            preloaderVideo.addEventListener('ended', function() {
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500);
-            });
-
-            // Fallback in case video doesn't load or play
-            setTimeout(() => {
-                if (!preloaderVideo.ended) {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                    }, 500);
-                }
-            }, 5000); // Adjust this time based on your video length
-        });
-    </script>
     <main>
         <header class="site-header">
             <div class="container">
@@ -460,7 +399,106 @@ $(document).ready(function(){
 
 
 
-       
+        <section class="about-section section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-12 mb-4">
+                        <h2 class="text-white text-center mb-4">Meet the Secretariat</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Rajsekhar_Hajrah.JPG" class="circle-image img-fluid" alt="Secretary General">
+                                <div class="member-info">Secretary General<br>RAJSEKHAR HAJRAH B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat\Sayantika_neogi.jpg" class="circle-image img-fluid" alt="Deputy Secretary General">
+                                <div class="member-info">Deputy Secretary General<br>SAYANTIKA NEOGI B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Vishal_Roy.jpg" class="circle-image img-fluid" alt="Director General">
+                                <div class="member-info">Director General<br>VISHAL ROY B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/soujash_banerjee.jpg" class="circle-image img-fluid" alt="Head of Tech">
+                                <div class="member-info">Head of Tech<br>SOUJASH BANERJEE B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Pankaj_kumar_Sharma.jpg" class="circle-image img-fluid" alt="Treasurer">
+                                <div class="member-info">Treasurer<br>PANKAJ SHARMA B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Rajnandini_Ghosh.jpg" class="circle-image img-fluid" alt="Head of Sponsorship">
+                                <div class="member-info">Head of Sponsorship<br>RAJNANDINI GHOSH BBA</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Arghya_Banerjee.jpg" class="circle-image img-fluid" alt="Head of Social">
+                                <div class="member-info">Head of Social<br>ARGHYA BANERJEE B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Sneha_Das.jpg" class="circle-image img-fluid" alt="Head of Social">
+                                <div class="member-info">Head of Social<br>SNEHA DAS B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Shritama_Ghosh.jpg" class="circle-image img-fluid" alt="Head of Logistics">
+                                <div class="member-info">Head of Logistics<br>SHRITAMA GHOSH BCA</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Prerona_Paul.jpg" class="circle-image img-fluid" alt="Head of Hospitality">
+                                <div class="member-info">Head of Hospitality<br>PRERONA PAUL B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Ankita_mandal.jpg" class="circle-image img-fluid" alt="Head of Creatives">
+                                <div class="member-info">Head of Creatives<br>ANKITA MONDAL B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Swastika_Saha.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <div class="member-info">Head of Collaboration<br>SWASTIKA SAHA B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/surjyanshu_ghosh.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <div class="member-info">Head of Collaboration<br>SURJYANSHU GHOSH B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Sagnik_sengupta.jpg" class="circle-image img-fluid" alt="Head of Collaboration">
+                                <div class="member-info">Head of Collaboration<br>SAGNIK SENGUPTA B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Arshiya_Nandy.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <div class="member-info">Head of Delegate Affairs<br>ARSHIYA NANDY B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Apratim_Halder.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <div class="member-info">Head of Delegate Affairs<br>APRATIM HALDER B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Suhana_Parveen.jpg" class="circle-image img-fluid" alt="Head of Delegate Affairs">
+                                <div class="member-info">Head of Delegate Affairs<br>SUHANA PARVEEN LLB</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Puspargha_Roy.JPG" class="circle-image img-fluid" alt="Head of PR">
+                                <div class="member-info">Head of PR<br>PUSHPARGHYA ROY B.TECH</div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Subhranil_Ghosh.jpg" class="circle-image img-fluid" alt="Head of PR">
+                                <div class="member-info">Head of PR<br>SUBHRANIL GHOSH B.TECH</div>
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
+                                <img src="secretariat/Sanchari_das.jpg" class="circle-image img-fluid" alt="Head of Documentation">
+                                <div class="member-info">Head of Documentation<br>SANCHARI DAS LLB</div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+
+
+
+
         <section class="video-section" id="section_4">
     <video autoplay muted loop id="video-background">
         <source src="video/new-video.mp4" type="video/mp4">
