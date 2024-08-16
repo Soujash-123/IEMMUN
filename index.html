@@ -16,6 +16,29 @@
     <link href="css/templatemo-festava-live.css" rel="stylesheet">
     <!-- Countdown Timer CSS -->
     <style>
+         .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999; /* Make sure it's on top */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preloader video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
         .countdown {
             display: flex;
             justify-content: center;
@@ -105,6 +128,12 @@
 </head>
 
 <body>
+    <div class="preloader" id="preloader">
+        <video autoplay muted id="preloader-video">
+            <source src="PreLoader.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <main>
         <header class="site-header">
             <div class="container">
@@ -396,120 +425,38 @@ $(document).ready(function(){
     });
 });
 </script>
-
-
-
-<section class="about-section section-padding" id="section_3">
+<section class="brochure-section section-padding" id="section_brochure" id="section_5"">
+    <video autoplay muted loop class="video-background">
+        <source src="video/VIDEO1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="container">
         <div class="row">
-
-            <div class="col-12 mb-4">
-                <h2 class="text-white text-center mb-4">Meet the Secretariat</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Rajsekhar_Hajrah.webp" class="circle-image img-fluid" alt="Secretary General">
-                        <div class="member-info">Secretary General<br>RAJSEKHAR HAJRAH B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Sayantika_neogi.webp" class="circle-image img-fluid" alt="Deputy Secretary General">
-                        <div class="member-info">Deputy Secretary General<br>SAYANTIKA NEOGI B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Vishal_Roy.webp" class="circle-image img-fluid" alt="Director General">
-                        <div class="member-info">Director General<br>VISHAL ROY B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/soujash_banerjee.webp" class="circle-image img-fluid" alt="Head of Tech">
-                        <div class="member-info">Head of Tech<br>SOUJASH BANERJEE B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Pankaj_kumar_Sharma.webp" class="circle-image img-fluid" alt="Treasurer">
-                        <div class="member-info">Treasurer<br>PANKAJ SHARMA B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Rajnandini_Ghosh.webp" class="circle-image img-fluid" alt="Head of Sponsorship">
-                        <div class="member-info">Head of Sponsorship<br>RAJNANDINI GHOSH BBA</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Arghya_Banerjee.webp" class="circle-image img-fluid" alt="Head of Social">
-                        <div class="member-info">Head of Social<br>ARGHYA BANERJEE B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Sneha_Das.webp" class="circle-image img-fluid" alt="Head of Social">
-                        <div class="member-info">Head of Social<br>SNEHA DAS B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Shritama_Ghosh.webp" class="circle-image img-fluid" alt="Head of Logistics">
-                        <div class="member-info">Head of Logistics<br>SHRITAMA GHOSH BCA</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Prerona_Paul.webp" class="circle-image img-fluid" alt="Head of Hospitality">
-                        <div class="member-info">Head of Hospitality<br>PRERONA PAUL B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Ankita_mandal.webp" class="circle-image img-fluid" alt="Head of Creatives">
-                        <div class="member-info">Head of Creatives<br>ANKITA MONDAL B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Swastika_Saha.webp" class="circle-image img-fluid" alt="Head of Collaboration">
-                        <div class="member-info">Head of Collaboration<br>SWASTIKA SAHA B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/surjyanshu_ghosh.webp" class="circle-image img-fluid" alt="Head of Collaboration">
-                        <div class="member-info">Head of Collaboration<br>SURJYANSHU GHOSH B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Sagnik_sengupta.webp" class="circle-image img-fluid" alt="Head of Collaboration">
-                        <div class="member-info">Head of Collaboration<br>SAGNIK SENGUPTA B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Arshiya_Nandy.webp" class="circle-image img-fluid" alt="Head of Delegate Affairs">
-                        <div class="member-info">Head of Delegate Affairs<br>ARSHIYA NANDY B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Apratim_Halder.webp" class="circle-image img-fluid" alt="Head of Delegate Affairs">
-                        <div class="member-info">Head of Delegate Affairs<br>APRATIM HALDER B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Suhana_Parveen.webp" class="circle-image img-fluid" alt="Head of Delegate Affairs">
-                        <div class="member-info">Head of Delegate Affairs<br>SUHANA PARVEEN LLB</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Puspargha_Roy.webp" class="circle-image img-fluid" alt="Head of PR">
-                        <div class="member-info">Head of PR<br>PUSHPARGHYA ROY B.TECH</div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Subhranil_Ghosh.webp" class="circle-image img-fluid" alt="Head of PR">
-                        <div class="member-info">Head of PR<br>SUBHRANIL GHOSH B.TECH</div>
-                    </div>
-
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 secretariat-member">
-                        <img src="secretariat/Sanchari_das.webp" class="circle-image img-fluid" alt="Head of Documentation">
-                        <div class="member-info">Head of Documentation<br>SANCHARI DAS LLB</div>
-                    </div>
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                <div class="services-info">
+                    <h2 class="mb-4">Download Brochure</h2>
+                    <p>Click the button below to download our brochure for IEMMUN 2024.</p>
+                    <a href="MUN brochure 2024_20240717_181436_0000.pdf" class="btn custom-btn" download>Download Brochure</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div>
+                    <iframe src="MUN brochure 2024_20240717_181436_0000.pdf" width="100%" height="500px">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
-        
-
-
-
-
-        <section class="video-section" id="section_4">
-    <video autoplay muted loop id="video-background">
-        <source src="video/new-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+<section class="video-section" id="section_4">
     <div class="content-overlay">
         <div class="container">
-            <div class="col-12 mb-3" style="margin-top: 20px;">
+            <div class="col-12 mb-3" style="margin-top: 30px;">
                 <h3 class="text-white text-center mb-4">This Year's Committees</h3>
                 <div class="carousel-container">
-                    <div class="carousel">
+                    <div class="carousel-row">
                         <div class="carousel-card">
                             <div class="circle-image">
                                 <img src="images/communities/unecosoc.jpg" class="img-fluid rounded-circle" alt="UNECOSOC">
@@ -518,6 +465,7 @@ $(document).ready(function(){
                                 <h3>UNECOSOC</h3>
                                 <p>UN Economic and Social Council works towards sustainable development.</p>
                                 <div class="additional-info">The United Nations Economic and Social Council (UNECOSOC) is a UN body that promotes international economic and social cooperation. Comprising 54 member states, UNECOSOC coordinates the UN's work in areas like sustainable development, human rights, and health, fostering dialogue among governments, NGOs, and other stakeholders.</div>
+                                <button class="register-button">Register</button>
                             </div>
                         </div>
                         <div class="carousel-card">
@@ -527,7 +475,8 @@ $(document).ready(function(){
                             <div class="community-info">
                                 <h3>UNDISEC</h3>
                                 <p>UN Disarmament and International Security Committee focuses on global security issues.</p>
-                                <div class="additional-info">More details about UNDISEC...</div>
+                                <div class="additional-info">The United Nations Department of Disarmament Affairs (UNDISEC) is a UN body responsible for promoting disarmament and non-proliferation efforts globally. It works to advance international agreements and treaties aimed at reducing and eliminating weapons of mass destruction, including nuclear, chemical, and biological weapons. UNDISEC facilitates negotiations, supports disarmament initiatives, and coordinates efforts among member states to foster a safer and more secure world.</div>
+                                <button class="register-button">Register</button>
                             </div>
                         </div>
                         <div class="carousel-card">
@@ -537,9 +486,12 @@ $(document).ready(function(){
                             <div class="community-info">
                                 <h3>UNHCR</h3>
                                 <p>UN Refugee Agency provides assistance and protection to refugees worldwide.</p>
-                                <div class="additional-info">More details about UNHCR...</div>
+                                <div class="additional-info">The United Nations High Commissioner for Refugees (UNHCR) is a UN agency dedicated to protecting and supporting refugees, internally displaced persons, and stateless individuals. Established in 1950, UNHCR works to ensure that everyone has the right to seek asylum and find safe refuge in another country. The organization provides essential services such as shelter, education, and healthcare, while also advocating for durable solutions to displacement, including voluntary repatriation, local integration, and resettlement.</div>
+                                <button class="register-button">Register</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="carousel-row">
                         <div class="carousel-card">
                             <div class="circle-image">
                                 <img src="images/communities/loksabha.jpg" class="img-fluid rounded-circle" alt="Lok Sabha">
@@ -547,7 +499,8 @@ $(document).ready(function(){
                             <div class="community-info">
                                 <h3>Lok Sabha</h3>
                                 <p>The lower house of India's Parliament represents the people of India.</p>
-                                <div class="additional-info">More details about Lok Sabha...</div>
+                                <div class="additional-info">The Lok Sabha, or House of the People, is the lower house of India’s Parliament. It plays a crucial role in the legislative process, representing the electorate of India through its elected members. The Lok Sabha is responsible for passing laws, scrutinizing the government, and debating national issues. Its members are elected directly by the people of India through general elections, and the body operates with the goal of reflecting the will of the people in the legislative process.</div>
+                                <button class="register-button">Register</button>
                             </div>
                         </div>
                         <div class="carousel-card">
@@ -557,7 +510,8 @@ $(document).ready(function(){
                             <div class="community-info">
                                 <h3>IP</h3>
                                 <p>Intellectual Property Committee deals with global intellectual property issues.</p>
-                                <div class="additional-info">More details about IP...</div>
+                                <div class="additional-info">International Press (IP) is a global network of media organizations and journalists dedicated to providing comprehensive, accurate, and unbiased news coverage from around the world. IP aims to foster greater understanding and dialogue by reporting on international events, cultural exchanges, and global issues. It serves as a platform for diverse voices and perspectives, promoting transparency and informed decision-making through its extensive network of correspondents and media partners.</div>
+                                <button class="register-button">Register</button>
                             </div>
                         </div>
                     </div>
@@ -566,104 +520,62 @@ $(document).ready(function(){
         </div>
     </div>
 </section>
-<style>
-  .video-section {
-    position: relative;
-    height: 100vh; /* Adjust height as needed */
-    overflow: hidden;
-}
 
-#video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+<style>
+.video-section {
+    position: relative;
+    min-height: 120vh; /* Adjusted to make the section taller */
+    overflow: hidden;
+    background-color: #000;
+    padding-bottom: 50px; /* Add padding to ensure content doesn't touch the bottom edge */
 }
 
 .content-overlay {
     position: relative;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6); /* Adjust transparency as needed */
-    padding: 200px 0; /* Increased padding to make overlay longer */
-    height: 200%; /* Ensure it covers the full height */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 100px 0;
+    height: 100%;
 }
 
 .carousel-container {
-    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-row {
     display: flex;
     justify-content: center;
-}
-
-.carousel {
-    width: 100%;
-    height: 300px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: rotate 20s infinite linear;
-}
-
-.carousel:hover {
-    animation-play-state: paused; /* Pause the rotation when hovering over the carousel */
+    margin-bottom: 30px;
 }
 
 .carousel-card {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform-style: preserve-3d;
-    transform-origin: center;
-    width: 250px;
-    height: 300px;
-    margin-left: -125px;
+    width: 350px;
+    min-height: 350px;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: background-color 0.3s, transform 0.3s, z-index 0.3s;
+    margin: 0 20px;
+    overflow: hidden;
 }
 
 .carousel-card:hover {
     background-color: darkcyan;
-    transform: translateZ(600px) scale(1.3); /* Increase scale and bring the card closer to the viewer */
-    z-index: 10; /* Bring the hovered card to the front */
+    z-index: 10;
 }
 
-.carousel-card:hover .additional-info {
+.carousel-card:hover .additional-info,
+.carousel-card:hover .register-button {
     display: block;
 }
 
-.carousel-card:nth-child(1) {
-    transform: rotateY(0deg) translateZ(500px);
-}
-.carousel-card:nth-child(2) {
-    transform: rotateY(72deg) translateZ(500px);
-}
-.carousel-card:nth-child(3) {
-    transform: rotateY(144deg) translateZ(500px);
-}
-.carousel-card:nth-child(4) {
-    transform: rotateY(216deg) translateZ(500px);
-}
-.carousel-card:nth-child(5) {
-    transform: rotateY(288deg) translateZ(500px);
-}
-
-@keyframes rotate {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
-}
-
 .circle-image {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     border-radius: 50%;
     margin: 0 auto;
@@ -700,33 +612,25 @@ $(document).ready(function(){
     padding: 10px;
     border-radius: 4px;
 }
+
+.register-button {
+    display: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #0080ff;
+}
 </style>
 
-        <section class="brochure-section section-padding" id="section_brochure" id="section_5"">
-    <video autoplay muted loop class="video-background">
-        <source src="video/VIDEO1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
-                <div class="services-info">
-                    <h2 class="mb-4">Download Brochure</h2>
-                    <p>Click the button below to download our brochure for IEMMUN 2024.</p>
-                    <a href="MUN brochure 2024_20240717_181436_0000.pdf" class="btn custom-btn" download>Download Brochure</a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div>
-                    <iframe src="MUN brochure 2024_20240717_181436_0000.pdf" width="100%" height="500px">
-                        <p>Your browser does not support iframes.</p>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
+       
 <section class="brochure-section section-padding" id="section_brochure" id="section_6">
     <video autoplay muted loop class="video-background">
         <source src="video/VIDEO1.mp4" type="video/mp4">
@@ -925,6 +829,19 @@ $(document).ready(function(){
             </div>
         </footer>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set timeout for preloader
+            setTimeout(function () {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('fade-out');
+                // Wait for the fade-out animation to complete before hiding the preloader
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 1000); // Match the fade-out duration
+            }, 7000); // Duration of the preloader video
+        });
+    </script>
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
