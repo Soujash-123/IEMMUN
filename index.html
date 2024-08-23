@@ -751,18 +751,18 @@ document.addEventListener('DOMContentLoaded', () => {
 <style>
 .video-section {
     position: relative;
-    min-height: 120vh; /* Adjusted to make the section taller */
+    min-height: 100vh; /* Adjusted to fit the screen height */
     overflow: hidden;
     background-color: #000;
-    padding-bottom: 50px; /* Add padding to ensure content doesn't touch the bottom edge */
+    padding-bottom: 20px; /* Reduced padding to fit content better */
 }
 
 .content-overlay {
     position: relative;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 100px 0;
-    height: 100%;
+    padding: 50px 0; /* Reduced padding to fit the content better */
+    height: auto; /* Adjusted height to fit the content */
 }
 
 .carousel-container {
@@ -774,19 +774,21 @@ document.addEventListener('DOMContentLoaded', () => {
 .carousel-row {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-bottom: 20px; /* Reduced margin */
 }
 
 .carousel-card {
-    width: 350px;
-    min-height: 350px;
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 300px; /* Max width for larger screens */
+    min-height: 300px; /* Adjusted height to maintain card proportion */
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: background-color 0.3s, transform 0.3s, z-index 0.3s;
-    margin: 0 20px;
+    margin: 10px; /* Reduced margin between cards */
     overflow: hidden;
 }
 
@@ -801,8 +803,8 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 .circle-image {
-    width: 150px;
-    height: 150px;
+    width: 100px; /* Adjusted width for better fit */
+    height: 100px; /* Adjusted height */
     overflow: hidden;
     border-radius: 50%;
     margin: 0 auto;
@@ -820,19 +822,19 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 .community-info h3 {
-    font-size: 24px;
+    font-size: 20px; /* Adjusted font size */
     margin-bottom: 10px;
     color: #ffffff;
 }
 
 .community-info p {
-    font-size: 16px;
+    font-size: 14px; /* Adjusted font size */
     color: #d4d4d4;
 }
 
 .additional-info {
     display: none;
-    font-size: 14px;
+    font-size: 12px; /* Adjusted font size */
     color: #ffffff;
     margin-top: 10px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -842,8 +844,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .register-button {
     display: none;
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 10px; /* Reduced margin */
+    padding: 8px 16px; /* Adjusted padding */
     background-color: #00bfff;
     color: white;
     border: none;
@@ -854,6 +856,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .register-button:hover {
     background-color: #0080ff;
 }
+
 </style>
 
 
