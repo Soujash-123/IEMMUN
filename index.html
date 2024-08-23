@@ -134,6 +134,27 @@
             Your browser does not support the video tag.
         </video>
     </div>
+    <script>
+    // Function to detect if the user is on a mobile device
+    function isMobileDevice() {
+        return /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+    }
+
+    // Hide the preloader if on a mobile device
+    document.addEventListener('DOMContentLoaded', function() {
+        if (isMobileDevice()) {
+            document.getElementById('preloader').style.display = 'none'; // Hide the preloader
+        } else {
+            // Preloader logic for desktop
+            const preloader = document.getElementById('preloader');
+            const video = document.getElementById('preloader-video');
+
+            video.onended = function() {
+                preloader.style.display = 'none'; // Hide preloader after video ends
+            };
+        }
+    });
+</script>
     <main>
         <header class="site-header">
             <div class="container">
