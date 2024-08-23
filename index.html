@@ -183,137 +183,283 @@
             </div>
         </nav>
         <section class="hero-section" id="section_1">
-            <div class="section-overlay"></div>
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="row">
-                    <div class="col-12 mt-auto mb-5 text-center">
-                        <small>IEM Presents</small>
-                        <h1 class="text-white mb-5">IEMMUN 2k24</h1>
-                        <a class="btn custom-btn smoothscroll" href="#section_2">Let's get started</a>
-                    </div>
-                    <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
-                        <div class="date-wrap">
-                            <h5 class="text-white">
-                                <i class="custom-icon bi-clock me-2"></i>
-                                13 - 15<sup>th</sup> September 2024
-                            </h5>
-                        </div>
-                        <div class="location-wrap mx-auto py-3 py-lg-0">
-                            <a href="https://maps.app.goo.gl/TfrSqnc6HygwyUMFA" target="_blank" rel="noopener noreferrer">
-                                <h5 class="text-white">
-                                    <i class="custom-icon bi-geo-alt me-2"></i>
-                                    IEM Gurukul Building
-                                </h5>
+    <div class="section-overlay"></div>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-12 mt-auto mb-5 text-center">
+                <small>IEM Presents</small>
+                <h1 class="text-white mb-5">IEMMUN 2k24</h1>
+                <a class="btn custom-btn smoothscroll" href="#section_2">Let's get started</a>
+            </div>
+            <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
+                <div class="date-wrap">
+                    <h5 class="text-white">
+                        <i class="custom-icon bi-clock me-2"></i>
+                        13 - 15<sup>th</sup> September 2024
+                    </h5>
+                </div>
+                <div class="location-wrap mx-auto py-3 py-lg-0">
+                    <a href="https://maps.app.goo.gl/TfrSqnc6HygwyUMFA" target="_blank" rel="noopener noreferrer">
+                        <h5 class="text-white">
+                            <i class="custom-icon bi-geo-alt me-2"></i>
+                            IEM Gurukul Building
+                        </h5>
+                    </a>
+                </div>
+                <div class="social-share">
+                    <ul class="social-icon d-flex align-items-center justify-content-center">
+                        <span class="text-white me-3">Share:</span>
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-facebook"></span>
                             </a>
-                        </div>
-                        <div class="social-share">
-                            <ul class="social-icon d-flex align-items-center justify-content-center">
-                                <span class="text-white me-3">Share:</span>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-facebook"></span>
-                                    </a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-twitter"></span>
-                                    </a>
-                                </li>
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-instagram"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-twitter"></span>
+                            </a>
+                        </li>
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link">
+                                <span class="bi-instagram"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="video-wrap">
-                <video autoplay="" loop="" muted="" class="custom-video" poster="">
-                    <source src="video/pexels-2022395.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
+        </div>
+    </div>
+    <div class="video-wrap">
+        <video autoplay="" loop="" muted="" class="custom-video" poster="">
+            <source src="video/pexels-2022395.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<style>
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .video-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1; /* Place the video behind the content */
+    }
+
+    .custom-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the entire container */
+    }
+
+    .section-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Optional: Darkens the video background */
+        z-index: 1; /* Places the overlay above the video */
+    }
+
+    .container {
+        position: relative;
+        z-index: 2; /* Places the text and other content above the overlay */
+    }
+</style>
+
         <section class="about-section section-padding" id="section_1">
-            <!-- Countdown Timer -->
-            <div class="countdown">
-                <div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner" id="days">
-                            <div class="flip-card-front">
-                                00
-                            </div>
-                            <div class="flip-card-back">
-                                00
-                            </div>
-                        </div>
+    <!-- Countdown Timer -->
+    <div class="countdown d-flex justify-content-center align-items-center flex-wrap">
+        <div class="countdown-item">
+            <div class="flip-card">
+                <div class="flip-card-inner" id="days">
+                    <div class="flip-card-front">
+                        00
                     </div>
-                    <div>Days</div>
-                </div>
-                <div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner" id="hours">
-                            <div class="flip-card-front">
-                                00
-                            </div>
-                            <div class="flip-card-back">
-                                00
-                            </div>
-                        </div>
+                    <div class="flip-card-back">
+                        00
                     </div>
-                    <div>Hours</div>
-                </div>
-                <div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner" id="minutes">
-                            <div class="flip-card-front">
-                                00
-                            </div>
-                            <div class="flip-card-back">
-                                00
-                            </div>
-                        </div>
-                    </div>
-                    <div>Minutes</div>
-                </div>
-                <div>
-                    <div class="flip-card">
-                        <div class="flip-card-inner" id="seconds">
-                            <div class="flip-card-front">
-                                00
-                            </div>
-                            <div class="flip-card-back">
-                                00
-                            </div>
-                        </div>
-                    </div>
-                    <div>Seconds</div>
                 </div>
             </div>
-        </section>
+            <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+            <div class="flip-card">
+                <div class="flip-card-inner" id="hours">
+                    <div class="flip-card-front">
+                        00
+                    </div>
+                    <div class="flip-card-back">
+                        00
+                    </div>
+                </div>
+            </div>
+            <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+            <div class="flip-card">
+                <div class="flip-card-inner" id="minutes">
+                    <div class="flip-card-front">
+                        00
+                    </div>
+                    <div class="flip-card-back">
+                        00
+                    </div>
+                </div>
+            </div>
+            <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+            <div class="flip-card">
+                <div class="flip-card-inner" id="seconds">
+                    <div class="flip-card-front">
+                        00
+                    </div>
+                    <div class="flip-card-back">
+                        00
+                    </div>
+                </div>
+            </div>
+            <div class="countdown-label">Seconds</div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure section takes full height of the viewport */
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+    width: 100%;
+    max-width: 800px; /* Maximum width for larger screens */
+    gap: 20px; /* Space between countdown items */
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Allows countdown items to grow and shrink */
+    min-width: 80px; /* Minimum width to maintain readability */
+}
+
+.flip-card {
+    perspective: 1000px; /* Required for the 3D flip effect */
+    width: 20vw; /* Width is 20% of the viewport width */
+    height: 20vw; /* Height is also 20% of the viewport width to maintain square shape */
+    max-width: 150px; /* Maximum width for larger screens */
+    max-height: 150px; /* Maximum height for larger screens */
+    position: relative;
+}
+
+.flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.countdown-label {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #fff; /* Adjust color to fit your theme */
+}
+
+</style>
+
+<script>
+    const countdown = () => {
+        const countDate = new Date("September 13, 2024 00:00:00").getTime();
+        const now = new Date().getTime();
+        const gap = countDate - now;
+
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+
+        const textDay = Math.floor(gap / day);
+        const textHour = Math.floor((gap % day) / hour);
+        const textMinute = Math.floor((gap % hour) / minute);
+        const textSecond = Math.floor((gap % minute) / second);
+
+        document.getElementById('days').innerHTML = `<div class="flip-card-inner">
+            <div class="flip-card-front">${textDay}</div>
+            <div class="flip-card-back">${textDay}</div>
+        </div>`;
+        document.getElementById('hours').innerHTML = `<div class="flip-card-inner">
+            <div class="flip-card-front">${textHour}</div>
+            <div class="flip-card-back">${textHour}</div>
+        </div>`;
+        document.getElementById('minutes').innerHTML = `<div class="flip-card-inner">
+            <div class="flip-card-front">${textMinute}</div>
+            <div class="flip-card-back">${textMinute}</div>
+        </div>`;
+        document.getElementById('seconds').innerHTML = `<div class="flip-card-inner">
+            <div class="flip-card-front">${textSecond}</div>
+            <div class="flip-card-back">${textSecond}</div>
+        </div>`;
+    };
+
+    setInterval(countdown, 1000);
+</script>
+
         <section class="about-section section-padding" id="section_2">
     <div class="container">
         <div class="row">
+            <!-- Text Section -->
             <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
                 <div class="services-info">
                     <h2 class="text-white mb-4">About IEMMUN 2k24</h2>
-
                     <p class="text-white">
-                        Over the years, the institute has been a keen contributor to the Model United Nations Community. 
-                        This year we are coming forth with the most awaited 11th edition of IEM-MUN. IEM-MUN 2024 will provide a platform to exhibit knowledge, interpersonal, and leadership skills where the boundaries of every individual are tested, their patience worked, and their intellect challenged. 
-                        IEM-MUN provides a wonderful platform for young people to solve issues of global consequences and shape their journey in becoming future leaders. Being one of the most eagerly awaited MUN in the city, it is a wonderful opportunity for student delegates to take responsibility, rise to the occasion, and propose solutions to geopolitical issues.
+                        Over the years, the institute has been a keen contributor to the Model United Nations Community. This year we are coming forth with the most awaited 11th edition of IEM-MUN. IEM-MUN 2024 will provide a platform to exhibit knowledge, interpersonal, and leadership skills where the boundaries of every individual are tested, their patience worked, and their intellect challenged. IEM-MUN provides a wonderful platform for young people to solve issues of global consequences and shape their journey in becoming future leaders. Being one of the most eagerly awaited MUN in the city, it is a wonderful opportunity for student delegates to take responsibility, rise to the occasion, and propose solutions to geopolitical issues.
                     </p>
-
                     <h6 class="text-white mt-4">Once in a Lifetime Experience</h6>
                     <h6 class="text-white mt-4">Wide Range of Delegations</h6>
                 </div>
             </div>
 
+            <!-- Slideshow Section -->
             <div class="col-lg-6 col-12">
                 <div id="slideshow" class="slideshow">
                     <div class="slides">
+                        <!-- First Slide -->
                         <div class="slide active">
                             <img src="images/pexels-alexander-suhorucov-6457579.jpg" class="d-block w-100" alt="First slide">
                             <div class="caption">
@@ -321,6 +467,7 @@
                                 <p>UNCOPUOS</p>
                             </div>
                         </div>
+                        <!-- Second Slide -->
                         <div class="slide">
                             <img src="images/slide2.jpg" class="d-block w-100" alt="Second slide">
                             <div class="caption">
@@ -328,6 +475,7 @@
                                 <p>Description for second slide</p>
                             </div>
                         </div>
+                        <!-- Third Slide -->
                         <div class="slide">
                             <img src="images/slide3.jpg" class="d-block w-100" alt="Third slide">
                             <div class="caption">
@@ -335,6 +483,7 @@
                                 <p>Description for third slide</p>
                             </div>
                         </div>
+                        <!-- Fourth Slide -->
                         <div class="slide">
                             <img src="images/slide4.jpg" class="d-block w-100" alt="Fourth slide">
                             <div class="caption">
@@ -343,6 +492,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Navigation Arrows -->
                     <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
                     <a class="next" onclick="moveSlide(1)">&#10095;</a>
                 </div>
@@ -351,11 +501,11 @@
     </div>
 </section>
 
+<!-- Slideshow CSS -->
 <style>
 .slideshow {
     position: relative;
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -382,23 +532,25 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 16px;
-    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+    user-select: none;
+}
+
+.prev {
+    left: 0;
 }
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
 }
 </style>
 
+<!-- Slideshow JavaScript -->
 <script>
 let currentSlide = 0;
 
@@ -420,14 +572,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-
-<script>
-$(document).ready(function(){
-    $('#aboutCarousel').carousel({
-        interval: false // Disable automatic sliding
-    });
-});
-</script>
 <section class="brochure-section section-padding" id="section_3"">
     <video autoplay muted loop class="video-background">
         <source src="video/VIDEO1.mp4" type="video/mp4">
@@ -962,19 +1106,7 @@ $(document).ready(function(){
             </div>
         </footer>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Set timeout for preloader
-            setTimeout(function () {
-                const preloader = document.getElementById('preloader');
-                preloader.classList.add('fade-out');
-                // Wait for the fade-out animation to complete before hiding the preloader
-                setTimeout(function () {
-                    preloader.style.display = 'none';
-                }, 1000); // Match the fade-out duration
-            }, 7000); // Duration of the preloader video
-        });
-    </script>
+
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
