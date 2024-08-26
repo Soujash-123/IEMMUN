@@ -130,57 +130,68 @@
 
 <body>
 	<div class="preloader" id="preloader">
-    <video autoplay muted id="preloader-video">
-        <source src="PreLoader.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="text-message" id="text-message">IEMMUN</div>
-</div>
+        <video autoplay muted id="preloader-video">
+            <source src="PreLoader.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="mobile-preloader">
+            <p>IEMMUN</p>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
 <style>
-/* Hide the preloader by default */
-.preloader {
+/* Hide the video preloader by default */
+#preloader-video {
+    display: block;
+}
+
+/* Hide the mobile preloader by default */
+.mobile-preloader {
     display: none;
 }
 
-/* Show text message on small screens (e.g., phones) */
-@media (max-width: 768px) {
-    .preloader {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000; /* Adjust background color if needed */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-    }
-    
+/* Styles for the text and progress bar */
+.mobile-preloader p {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.progress-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 50%; /* Adjust the width as needed */
+    height: 20px;
+    background-color: red;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
     #preloader-video {
         display: none;
     }
-
-    .text-message {
-        color: #fff; /* Text color */
-        font-size: 2em; /* Adjust size as needed */
-        font-family: Arial, sans-serif;
-        opacity: 1;
-        transition: opacity 1s ease-out;
+    .mobile-preloader {
+        display: block;
     }
 }
 
 	</style>
 	<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const textMessage = document.getElementById('text-message');
-
-    // Set a timer to fade out the text message after a certain period
-    setTimeout(() => {
-        textMessage.style.opacity = 0;
-    }, 2000); // Adjust the duration as needed (2 seconds in this case)
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth <= 767) {
+        document.getElementById("preloader-video").style.display = "none";
+        document.querySelector(".mobile-preloader").style.display = "block";
+    }
 });
+
 	</script>
     <main>
         <header class="site-header">
