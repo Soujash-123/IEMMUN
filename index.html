@@ -143,6 +143,7 @@
     </div>
 <style>
 /* Hide the video preloader by default */
+/* Hide the video preloader by default */
 #preloader-video {
     display: block;
 }
@@ -152,36 +153,42 @@
     display: none;
 }
 
-/* Styles for the text and progress bar */
+/* Styles for the text */
 .mobile-preloader p {
     font-size: 24px;
     text-align: center;
     margin-top: 20px;
 }
 
+/* Container for the progress bar */
 .progress-container {
     width: 80%;
     margin: 20px auto;
-    background-color: #f3f3f3;
+    background-color: black; /* Black emptiness */
+    border: 2px solid white; /* White outline */
     border-radius: 5px;
     overflow: hidden;
-    height: 20px; /* Adjust height if needed */
+    height: 20px; /* Adjust height as needed */
+    position: relative;
 }
 
-/* Animation for the progress bar */
+/* Progress bar animation */
 @keyframes progress-bar {
     from {
         width: 0%;
     }
     to {
-        width: 100%; /* Adjust to fit your needs */
+        width: 100%;
     }
 }
 
+/* Red fluid progressing */
 .progress-bar {
     height: 100%;
-    background-color: red;
+    background-color: red; /* Red fluid */
+    width: 0; /* Start with no progress */
     animation: progress-bar 5s linear forwards; /* Adjust duration if needed */
+    border-radius: 3px; /* Rounding inside to match outer border */
 }
 
 /* Media query for mobile devices */
