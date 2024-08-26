@@ -130,11 +130,58 @@
 
 <body>
 	<div class="preloader" id="preloader">
-        <video autoplay muted id="preloader-video">
-            <source src="PreLoader.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <video autoplay muted id="preloader-video">
+        <source src="PreLoader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="text-message" id="text-message">IEMMUN</div>
+</div>
+<style>
+/* Hide the preloader by default */
+.preloader {
+    display: none;
+}
+
+/* Show text message on small screens (e.g., phones) */
+@media (max-width: 768px) {
+    .preloader {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000; /* Adjust background color if needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    #preloader-video {
+        display: none;
+    }
+
+    .text-message {
+        color: #fff; /* Text color */
+        font-size: 2em; /* Adjust size as needed */
+        font-family: Arial, sans-serif;
+        opacity: 1;
+        transition: opacity 1s ease-out;
+    }
+}
+
+	</style>
+	<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const textMessage = document.getElementById('text-message');
+
+    // Set a timer to fade out the text message after a certain period
+    setTimeout(() => {
+        textMessage.style.opacity = 0;
+    }, 2000); // Adjust the duration as needed (2 seconds in this case)
+});
+	</script>
     <main>
         <header class="site-header">
             <div class="container">
