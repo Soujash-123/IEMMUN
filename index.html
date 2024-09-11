@@ -791,6 +791,7 @@ document.addEventListener('DOMContentLoaded', () => {
             text-align: center;
             margin-bottom: 20px;
             color: #f0f0f0;
+            font-family: Algerian;
         }
 
         /* Table Styles */
@@ -809,12 +810,18 @@ document.addEventListener('DOMContentLoaded', () => {
             text-align: left;
         }
 
+        /* Orangish thead */
         th {
-            background-color: #34495e;
+            background-color: #e67e22; /* Orangish color */
         }
 
         td {
             background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Styles for non-table features (Algerian font) */
+        .dress-code h3, .special-notes h3, .dress-code ul, .special-notes p {
+            font-family: Algerian;
         }
 
         .special-notes, .dress-code {
@@ -827,6 +834,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         .dress-code ul {
             list-style-type: none;
+        }
+
+        /* Button Styles */
+        .download-button {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: Algerian;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .download-button:hover {
+            background-color: darkred;
         }
     </style>
 
@@ -956,6 +981,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>LOK SABHA members may wear eastern attire on all days of the conference.</p>
             <p>White-colored attire is encouraged on Day 2 as a symbol of support for Tillottama.</p>
         </div>
+
+        <!-- Download Button -->
+        <a href="https://github.com/your-repo/path-to-file/your-image-file.jpeg" class="download-button" download>Download Itinerary JPEG</a>
     </div>
 </section>
 
