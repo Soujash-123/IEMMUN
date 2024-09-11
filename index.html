@@ -745,93 +745,220 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 </style>
 <section id="conference-itinerary">
-    <h2>Conference Itinerary</h2>
-    
-    <!-- Embedding the video -->
-    <div class="video-container">
-        <video width="600" controls>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-screen background video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content container */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #34495e;
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .special-notes, .dress-code {
+            margin-top: 20px;
+        }
+
+        .special-notes p, .dress-code ul {
+            margin: 10px 0;
+        }
+
+        .dress-code ul {
+            list-style-type: none;
+        }
+    </style>
+
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop>
             <source src="video/VIDEO1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Your browser does not support HTML5 video.
         </video>
     </div>
 
-    <div class="day">
-        <h3>Day One – 13th September 2024</h3>
-        <ul>
-            <li>3:00 PM - 4:00 PM: Kit Distribution</li>
-            <li>4:00 PM - 4:30 PM: Opening Ceremony</li>
-            <li>4:30 PM - 7:00 PM: Committee Session 1</li>
-            <li>7:00 PM - 7:30 PM: Snacks</li>
-        </ul>
-    </div>
-    
-    <div class="day">
-        <h3>Day Two – 14th September 2024</h3>
-        <ul>
-            <li>9:00 AM - 11:30 AM: Committee Session 2</li>
-            <li>11:30 AM - 12:00 PM: Break</li>
-            <li>12:00 PM - 2:30 PM: Committee Session 3</li>
-            <li>2:30 PM - 3:30 PM: Lunch</li>
-            <li>3:30 PM - 6:30 PM: Committee Session 4</li>
-            <li>6:30 PM - 7:00 PM: High Tea</li>
-        </ul>
-    </div>
-    
-    <div class="day">
-        <h3>Day Three – 15th September 2024</h3>
-        <ul>
-            <li>9:00 AM - 11:30 AM: Committee Session 5</li>
-            <li>11:30 AM - 12:00 PM: Break</li>
-            <li>12:00 PM - 2:00 PM: Committee Session 6</li>
-            <li>2:00 PM - 3:00 PM: Lunch</li>
-            <li>3:00 PM - 5:00 PM: Committee Session 7</li>
-            <li>5:00 PM Onwards: Award Ceremony & Cultural Night</li>
-        </ul>
-    </div>
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Conference Itinerary</h2>
 
-    <div class="dress-code">
-        <h3>Dress Code</h3>
-        <ul>
-            <li><strong>Day 1:</strong> Western Formal Wear</li>
-            <li><strong>Day 2:</strong> Western Formal Wear</li>
-            <li><strong>Day 3:</strong> Eastern Formal Wear</li>
-        </ul>
-    </div>
+        <!-- Itinerary Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Day One – 13th September 2024</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kit Distribution</td>
+                    <td>3:00 PM - 4:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Opening Ceremony</td>
+                    <td>4:00 PM - 4:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 1</td>
+                    <td>4:30 PM - 7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Snacks</td>
+                    <td>7:00 PM - 7:30 PM</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <div class="special-notes">
-        <h3>Special Notes</h3>
-        <p>LOK SABHA members may wear eastern attire on all days of the conference.</p>
-        <p>White-colored attire is encouraged on Day 2 as a symbol of support for Tillottama.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day Two – 14th September 2024</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Committee Session 2</td>
+                    <td>9:00 AM - 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Break</td>
+                    <td>11:30 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 3</td>
+                    <td>12:00 PM - 2:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>2:30 PM - 3:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 4</td>
+                    <td>3:30 PM - 6:30 PM</td>
+                </tr>
+                <tr>
+                    <td>High Tea</td>
+                    <td>6:30 PM - 7:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Day Three – 15th September 2024</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Committee Session 5</td>
+                    <td>9:00 AM - 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Break</td>
+                    <td>11:30 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 6</td>
+                    <td>12:00 PM - 2:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>2:00 PM - 3:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 7</td>
+                    <td>3:00 PM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Award Ceremony & Cultural Night</td>
+                    <td>5:00 PM Onwards</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Dress Code -->
+        <div class="dress-code">
+            <h3>Dress Code</h3>
+            <ul>
+                <li><strong>Day 1:</strong> Western Formal Wear</li>
+                <li><strong>Day 2:</strong> Western Formal Wear</li>
+                <li><strong>Day 3:</strong> Eastern Formal Wear</li>
+            </ul>
+        </div>
+
+        <!-- Special Notes -->
+        <div class="special-notes">
+            <h3>Special Notes</h3>
+            <p>LOK SABHA members may wear eastern attire on all days of the conference.</p>
+            <p>White-colored attire is encouraged on Day 2 as a symbol of support for Tillottama.</p>
+        </div>
     </div>
 </section>
-<style>
-	#conference-itinerary {
-    margin: 20px;
-    font-family: Arial, sans-serif;
-}
 
-h2, h3 {
-    color: #2c3e50;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 5px 0;
-}
-
-.dress-code, .special-notes {
-    margin-top: 20px;
-}
-
-.dress-code ul li, .special-notes p {
-    padding-left: 10px;
-    margin-bottom: 10px;
-}
-</style>
 
 <section class="video-section" id="section_4">
     <div class="content-overlay">
