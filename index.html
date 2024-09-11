@@ -744,7 +744,201 @@ document.addEventListener('DOMContentLoaded', () => {
         border-radius: 4px;
     }
 </style>
-<section id="conference-itinerary">
+
+<section class="video-section" id="section_4">
+    <div class="content-overlay">
+        <div class="container">
+            <div class="col-12 mb-3" style="margin-top: 30px;">
+                <h3 class="text-white text-center mb-4">This Year's Committees</h3>
+                <div class="carousel-container">
+                    <div class="carousel-row">
+                        <div class="carousel-card">
+                            <div class="circle-image">
+                                <img src="images/communities/unecosoc.jpg" class="img-fluid rounded-circle" alt="UNECOSOC">
+                            </div>
+                            <div class="community-info">
+                                <h3>UNECOSOC</h3>
+                                <p>UN Economic and Social Council works towards sustainable development.</p>
+                                <div class="additional-info">Deliberation on the current state of clean energy access across key sectors with a special emphasis on enhancing the climate resilience of developing countries' infrastructure.</div>
+                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
+                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1vXscE6BbgusDo9IogXcmD5HO1rbMNlf2/view?usp=sharing'">View Study Guide</button>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <div class="circle-image">
+                                <img src="images/communities/undisec.jpg" class="img-fluid rounded-circle" alt="UNDISEC">
+                            </div>
+                            <div class="community-info">
+                                <h3>UNDISEC</h3>
+                                <p>UN Disarmament and International Security Committee focuses on global security issues.</p>
+                                <div class="additional-info">Deliberation on the proliferation of conventional and unconventional weapons in the Middle East with special emphasis on the ongoing conflict of Israel and Palestine.</div>
+                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
+                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/14IJuD7yUe7SMd6_dIZYEjtiXPRo9Xbc9/view?usp=sharing'">View Study Guide</button>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <div class="circle-image">
+                                <img src="images/communities/unhcr.jpg" class="img-fluid rounded-circle" alt="UNHCR">
+                            </div>
+                            <div class="community-info">
+                                <h3>UNHCR</h3>
+                                <p>UN Refugee Agency provides assistance and protection to refugees worldwide.</p>
+                                <div class="additional-info">
+                                    1. Promoting State Responsibility in ensuring the protection of displaced people.<br>
+                                    2. Addressing the welfare situation of IDPs and asylum-seekers in the Sahel Region and its implication towards the progression of Agenda 2030.
+                                </div>
+                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
+                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1eeWxeNSpZv7UwNpGCFMAU2B1K162BSKe/view?usp=sharing'">View Study Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-row">
+                        <div class="carousel-card">
+                            <div class="circle-image">
+                                <img src="images/communities/loksabha.jpg" class="img-fluid rounded-circle" alt="Lok Sabha">
+                            </div>
+                            <div class="community-info">
+                                <h3>Lok Sabha</h3>
+                                <p>The lower house of India's Parliament represents the people of India.</p>
+                                <div class="additional-info">
+                                    1. Discussion on the formulation of a comprehensive framework for improving the digital literacy rate of the country.<br>
+                                    2. Deliberation on the Disaster Management (Amendment) Bill, 2024.
+                                </div>
+                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
+                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1K7FE-HK5JoIG9wO1gskztaiNoCTG40hS/view?usp=sharing'">View Study Guide</button>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <div class="circle-image">
+                                <img src="images/communities/ip.jpg" class="img-fluid rounded-circle" alt="IP">
+                            </div>
+                            <div class="community-info">
+                                <h3>International Press (IP)</h3>
+                                <p>The International Press Committee covers journalistic aspects of the conference.</p>
+                                <div class="additional-info">Photographic coverage and journalistic representation of the conference.</div>
+                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
+                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1-AKkE7SXi8RO3Y9J4Fq6jqbphmKTXL3u/view?usp=sharing'">View Study Guide</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<style>
+.video-section {
+    position: relative;
+    min-height: 120vh; /* Adjusted to make the section taller */
+    overflow: hidden;
+    background-color: #000;
+    padding-bottom: 50px; /* Add padding to ensure content doesn't touch the bottom edge */
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 100px 0;
+    height: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.carousel-card {
+    width: 350px;
+    min-height: 350px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, z-index 0.3s;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.carousel-card:hover {
+    background-color: darkcyan;
+    z-index: 10;
+}
+
+.carousel-card:hover .additional-info,
+.carousel-card:hover .register-button {
+    display: block;
+}
+
+.circle-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.community-info {
+    text-align: center;
+    position: relative;
+}
+
+.community-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.community-info p {
+    font-size: 16px;
+    color: #d4d4d4;
+}
+
+.additional-info {
+    display: none;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.register-button {
+    display: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #c01f27;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #0080ff;
+}
+</style>
+
+	    <section id="conference-itinerary">
     <style>
         /* General Reset */
         * {
@@ -967,14 +1161,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Dress Code -->
         <div class="dress-code">
-            <h3>Dress Code</h3>
-            <ul>
-                <li><strong>Day 1:</strong> Western Formal Wear</li>
-                <li><strong>Day 2:</strong> Western Formal Wear</li>
-                <li><strong>Day 3:</strong> Eastern Formal Wear</li>
-            </ul>
-        </div>
+    <h3>Dress Code</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Dress Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Day 1</strong></td>
+                <td>Western Formal Wear</td>
+            </tr>
+            <tr>
+                <td><strong>Day 2</strong></td>
+                <td>Western Formal Wear</td>
+            </tr>
+            <tr>
+                <td><strong>Day 3</strong></td>
+                <td>Eastern Formal Wear</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+	    <style>
+		    /* Table Styles for Dress Code */
+.dress-code table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
 
+.dress-code th, .dress-code td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.dress-code th {
+    background-color: #e67e22; /* Orangish header */
+}
+
+.dress-code td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+	    </style>
         <!-- Special Notes -->
         <div class="special-notes">
             <h3>Special Notes</h3>
@@ -986,200 +1219,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="WhatsApp Image 2024-09-10 at 18.31.09.jpeg" class="download-button" download>Download Itinerary JPEG</a>
     </div>
 </section>
-
-
-<section class="video-section" id="section_4">
-    <div class="content-overlay">
-        <div class="container">
-            <div class="col-12 mb-3" style="margin-top: 30px;">
-                <h3 class="text-white text-center mb-4">This Year's Committees</h3>
-                <div class="carousel-container">
-                    <div class="carousel-row">
-                        <div class="carousel-card">
-                            <div class="circle-image">
-                                <img src="images/communities/unecosoc.jpg" class="img-fluid rounded-circle" alt="UNECOSOC">
-                            </div>
-                            <div class="community-info">
-                                <h3>UNECOSOC</h3>
-                                <p>UN Economic and Social Council works towards sustainable development.</p>
-                                <div class="additional-info">Deliberation on the current state of clean energy access across key sectors with a special emphasis on enhancing the climate resilience of developing countries' infrastructure.</div>
-                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
-                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1vXscE6BbgusDo9IogXcmD5HO1rbMNlf2/view?usp=sharing'">View Study Guide</button>
-                            </div>
-                        </div>
-                        <div class="carousel-card">
-                            <div class="circle-image">
-                                <img src="images/communities/undisec.jpg" class="img-fluid rounded-circle" alt="UNDISEC">
-                            </div>
-                            <div class="community-info">
-                                <h3>UNDISEC</h3>
-                                <p>UN Disarmament and International Security Committee focuses on global security issues.</p>
-                                <div class="additional-info">Deliberation on the proliferation of conventional and unconventional weapons in the Middle East with special emphasis on the ongoing conflict of Israel and Palestine.</div>
-                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
-                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/14IJuD7yUe7SMd6_dIZYEjtiXPRo9Xbc9/view?usp=sharing'">View Study Guide</button>
-                            </div>
-                        </div>
-                        <div class="carousel-card">
-                            <div class="circle-image">
-                                <img src="images/communities/unhcr.jpg" class="img-fluid rounded-circle" alt="UNHCR">
-                            </div>
-                            <div class="community-info">
-                                <h3>UNHCR</h3>
-                                <p>UN Refugee Agency provides assistance and protection to refugees worldwide.</p>
-                                <div class="additional-info">
-                                    1. Promoting State Responsibility in ensuring the protection of displaced people.<br>
-                                    2. Addressing the welfare situation of IDPs and asylum-seekers in the Sahel Region and its implication towards the progression of Agenda 2030.
-                                </div>
-                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
-                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1eeWxeNSpZv7UwNpGCFMAU2B1K162BSKe/view?usp=sharing'">View Study Guide</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-row">
-                        <div class="carousel-card">
-                            <div class="circle-image">
-                                <img src="images/communities/loksabha.jpg" class="img-fluid rounded-circle" alt="Lok Sabha">
-                            </div>
-                            <div class="community-info">
-                                <h3>Lok Sabha</h3>
-                                <p>The lower house of India's Parliament represents the people of India.</p>
-                                <div class="additional-info">
-                                    1. Discussion on the formulation of a comprehensive framework for improving the digital literacy rate of the country.<br>
-                                    2. Deliberation on the Disaster Management (Amendment) Bill, 2024.
-                                </div>
-                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
-                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1K7FE-HK5JoIG9wO1gskztaiNoCTG40hS/view?usp=sharing'">View Study Guide</button>
-                            </div>
-                        </div>
-                        <div class="carousel-card">
-                            <div class="circle-image">
-                                <img src="images/communities/ip.jpg" class="img-fluid rounded-circle" alt="IP">
-                            </div>
-                            <div class="community-info">
-                                <h3>International Press (IP)</h3>
-                                <p>The International Press Committee covers journalistic aspects of the conference.</p>
-                                <div class="additional-info">Photographic coverage and journalistic representation of the conference.</div>
-                                <button class="register-button" onclick="window.location.href='https://forms.gle/DYViC9WF6AqgGwX38'">Register</button>
-                                <button class="register-button" onclick="window.location.href='https://drive.google.com/file/d/1-AKkE7SXi8RO3Y9J4Fq6jqbphmKTXL3u/view?usp=sharing'">View Study Guide</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<style>
-.video-section {
-    position: relative;
-    min-height: 120vh; /* Adjusted to make the section taller */
-    overflow: hidden;
-    background-color: #000;
-    padding-bottom: 50px; /* Add padding to ensure content doesn't touch the bottom edge */
-}
-
-.content-overlay {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 100px 0;
-    height: 100%;
-}
-
-.carousel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.carousel-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.carousel-card {
-    width: 350px;
-    min-height: 350px;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s, z-index 0.3s;
-    margin: 0 20px;
-    overflow: hidden;
-}
-
-.carousel-card:hover {
-    background-color: darkcyan;
-    z-index: 10;
-}
-
-.carousel-card:hover .additional-info,
-.carousel-card:hover .register-button {
-    display: block;
-}
-
-.circle-image {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.circle-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.community-info {
-    text-align: center;
-    position: relative;
-}
-
-.community-info h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.community-info p {
-    font-size: 16px;
-    color: #d4d4d4;
-}
-
-.additional-info {
-    display: none;
-    font-size: 14px;
-    color: #ffffff;
-    margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.register-button {
-    display: none;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #c01f27;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.register-button:hover {
-    background-color: #0080ff;
-}
-</style>
 
 
        
