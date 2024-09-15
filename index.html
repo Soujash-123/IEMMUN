@@ -827,127 +827,387 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 </section>
 
+
+
+
 <style>
-    .video-section {
-        position: relative;
-        min-height: 120vh;
-        overflow: hidden;
-        background-color: #000;
-        padding-bottom: 50px;
-    }
+.video-section {
+    position: relative;
+    min-height: 120vh; /* Adjusted to make the section taller */
+    overflow: hidden;
+    background-color: #000;
+    padding-bottom: 50px; /* Add padding to ensure content doesn't touch the bottom edge */
+}
 
-    .content-overlay {
-        position: relative;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 100px 0;
-        height: 100%;
-    }
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 100px 0;
+    height: 100%;
+}
 
-    .carousel-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .carousel-row {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-        flex-wrap: wrap; /* To ensure it wraps on smaller screens */
-    }
+.carousel-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 
-    .carousel-card {
-        width: 350px;
-        min-height: 350px;
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: background-color 0.3s, transform 0.3s, z-index 0.3s;
-        margin: 10px; /* Adjust margin for responsiveness */
-        overflow: hidden;
-    }
+.carousel-card {
+    width: 350px;
+    min-height: 350px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, z-index 0.3s;
+    margin: 0 20px;
+    overflow: hidden;
+}
 
-    .carousel-card:hover {
-        background-color: darkcyan;
-        z-index: 10;
-    }
+.carousel-card:hover {
+    background-color: darkcyan;
+    z-index: 10;
+}
 
-    .carousel-card:hover .additional-info,
-    .carousel-card:hover .register-button {
-        display: block;
-    }
+.carousel-card:hover .additional-info,
+.carousel-card:hover .register-button {
+    display: block;
+}
 
-    .circle-image {
-        width: 150px;
-        height: 150px;
-        overflow: hidden;
-        border-radius: 50%;
-        margin: 0 auto;
-    }
+.circle-image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+}
 
-    .circle-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .community-info {
-        text-align: center;
-        position: relative;
-    }
+.community-info {
+    text-align: center;
+    position: relative;
+}
 
-    .community-info h3 {
-        font-size: 24px;
-        margin-bottom: 10px;
-        color: #ffffff;
-    }
+.community-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
 
-    .community-info p {
-        font-size: 16px;
-        color: #d4d4d4;
-    }
+.community-info p {
+    font-size: 16px;
+    color: #d4d4d4;
+}
 
-    .additional-info {
-        display: none;
-        font-size: 14px;
-        color: #ffffff;
-        margin-top: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-        border-radius: 4px;
-    }
+.additional-info {
+    display: none;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+}
 
-    .register-button {
-        display: none;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: #c01f27;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
+.register-button {
+    display: none;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #c01f27;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-    .register-button:hover {
-        background-color: #0080ff;
-    }
-
-    /* Media query for responsiveness */
-    @media (max-width: 768px) {
-        .carousel-row {
-            flex-direction: column; /* Stack cards one by one on mobile devices */
-            align-items: center;
-        }
-
-        .carousel-card {
-            width: 90%; /* Adjust width to make it more mobile-friendly */
-        }
-    }
+.register-button:hover {
+    background-color: #0080ff;
+}
 </style>
 
+	    <section id="conference-itinerary">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-screen background video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content container */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+            font-family: Algerian;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #fff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Orangish thead */
+        th {
+            background-color: #e67e22; /* Orangish color */
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Styles for non-table features (Algerian font) */
+        .dress-code h3, .special-notes h3, .dress-code ul, .special-notes p {
+            font-family: Algerian;
+        }
+
+        .special-notes, .dress-code {
+            margin-top: 20px;
+        }
+
+        .special-notes p, .dress-code ul {
+            margin: 10px 0;
+        }
+
+        .dress-code ul {
+            list-style-type: none;
+        }
+
+        /* Button Styles */
+        .download-button {
+            display: inline-block;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: Algerian;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .download-button:hover {
+            background-color: darkred;
+        }
+    </style>
+
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="video/VIDEO1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Conference Itinerary</h2>
+
+        <!-- Itinerary Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Day One – 13th September 2024</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kit Distribution</td>
+                    <td>3:00 PM - 4:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Opening Ceremony</td>
+                    <td>4:00 PM - 4:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 1</td>
+                    <td>4:30 PM - 7:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Snacks</td>
+                    <td>7:00 PM - 7:30 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Day Two – 14th September 2024</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Committee Session 2</td>
+                    <td>9:00 AM - 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Break</td>
+                    <td>11:30 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 3</td>
+                    <td>12:00 PM - 2:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>2:30 PM - 3:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 4</td>
+                    <td>3:30 PM - 6:30 PM</td>
+                </tr>
+                <tr>
+                    <td>High Tea</td>
+                    <td>6:30 PM - 7:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Day Three – 15th September 2024</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Committee Session 5</td>
+                    <td>9:00 AM - 11:30 AM</td>
+                </tr>
+                <tr>
+                    <td>Break</td>
+                    <td>11:30 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 6</td>
+                    <td>12:00 PM - 2:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Lunch</td>
+                    <td>2:00 PM - 3:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Committee Session 7</td>
+                    <td>3:00 PM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Award Ceremony & Cultural Night</td>
+                    <td>5:00 PM Onwards</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Dress Code -->
+        <div class="dress-code">
+    <h3>Dress Code</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Dress Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Day 1</strong></td>
+                <td>Western Formal Wear</td>
+            </tr>
+            <tr>
+                <td><strong>Day 2</strong></td>
+                <td>Western Formal Wear</td>
+            </tr>
+            <tr>
+                <td><strong>Day 3</strong></td>
+                <td>Eastern Formal Wear</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+	    <style>
+		    /* Table Styles for Dress Code */
+.dress-code table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.dress-code th, .dress-code td {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.dress-code th {
+    background-color: #e67e22; /* Orangish header */
+}
+
+.dress-code td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+	    </style>
         <!-- Special Notes -->
         <div class="special-notes">
             <h3>Special Notes</h3>
